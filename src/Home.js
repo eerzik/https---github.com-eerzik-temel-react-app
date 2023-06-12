@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import BlogList from "./BlogList";
 
 
@@ -52,6 +53,13 @@ const Home = () => {
         const newBlogs=blogs.filter(blog=>blog.id!==id);
         setBlogs(newBlogs);
     }
+const [isim,setIsim]=useState('luffy');
+    //boş köşeli parantez eklersek sadece sayfa yüklenirken çalışır.
+    //dolu köşeli parantez eklersek sayfa yüklenirken ve  blogs değiştiğinde çalışır.
+    useEffect(()=>{
+        console.log('UseEffect Çalıştı');
+        console.log(blogs);
+    },[blogs,isim])
 
     return (
         <div className="Home">
@@ -71,6 +79,8 @@ const Home = () => {
 
             <div className="home">
                 <BlogList bloglar={blogs} baslik="Bütün Yazılar" handleClick={handleClick} />
+                <br></br>
+                <button onClick={()=>setIsim('Zoro')}>Değiştir</button>
                 {/* <br></br>
                 <BlogList bloglar={blogs.filter((blog) => blog.yazar == 'luffy')} baslik="Seçkin Yazarların Yazıları" /> */}
             </div>
