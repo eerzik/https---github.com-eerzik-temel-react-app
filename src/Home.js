@@ -48,6 +48,10 @@ const Home = () => {
             id: 4
         }
     ])
+    const handleClick = (id) => {
+        const newBlogs=blogs.filter(blog=>blog.id!==id);
+        setBlogs(newBlogs);
+    }
 
     return (
         <div className="Home">
@@ -66,9 +70,9 @@ const Home = () => {
             <button onClick={handleClick4} >Arttır</button> */}
 
             <div className="home">
-                <BlogList bloglar={blogs} baslik="Bütün Yazılar" />
-                <br></br>
-                <BlogList bloglar={blogs.filter((blog)=>blog.yazar=='luffy')} baslik="Seçkin Yazarların Yazıları"/>
+                <BlogList bloglar={blogs} baslik="Bütün Yazılar" handleClick={handleClick} />
+                {/* <br></br>
+                <BlogList bloglar={blogs.filter((blog) => blog.yazar == 'luffy')} baslik="Seçkin Yazarların Yazıları" /> */}
             </div>
 
 
