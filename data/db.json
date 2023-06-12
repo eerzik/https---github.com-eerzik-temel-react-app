@@ -1,0 +1,28 @@
+{
+    "yazilar":[
+        {
+            "ad": "Yeni Başlayanlar için c#",
+            "aciklama": "lorem ipsum",
+            "yazar": "luffy",
+            "id": 1
+        },
+        {
+            "ad": "React Öğreniyorum",
+            "aciklama": "lorem ipsum",
+            "yazar": "zoro",
+            "id": 2
+        },
+        {
+            "ad": "İleri seviye c#",
+            "aciklama": "lorem ipsum",
+            "yazar": "luffy",
+            "id": 3
+        },
+        {
+            "ad": "Front End Web Geliştirme",
+            "aciklama": "lorem ipsum",
+            "yazar": "sanji",
+            "id": 4
+        }
+    ]
+}
