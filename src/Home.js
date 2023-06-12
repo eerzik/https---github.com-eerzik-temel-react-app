@@ -1,4 +1,5 @@
 import { useState } from "react";
+import BlogList from "./BlogList";
 
 
 const Home = () => {
@@ -21,7 +22,6 @@ const Home = () => {
 
     //     setSayac(3);
     // }
-
     const [blogs, setBlogs] = useState([
         {
             ad: "Yeni Başlayanlar için c#",
@@ -65,13 +65,10 @@ const Home = () => {
             {/* <p>{sayac}</p>
             <button onClick={handleClick4} >Arttır</button> */}
 
+            <div className="home">
+                <BlogList bloglar={blogs} baslik="Bütün Yazılar" />
+            </div>
 
-            {blogs.map((blog) => (
-                <div className="blog-preview" key={blog.id}>
-                    <h2>{blog.ad}</h2>
-                    <p>Yazının yazarı : {blog.yazar}</p>
-                </div>
-            ))}
 
         </div>
     );
