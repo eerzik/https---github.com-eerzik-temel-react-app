@@ -1,3 +1,6 @@
+import { useState } from "react";
+
+
 const Home = () => {
     const handleClick = () => {
 
@@ -7,9 +10,16 @@ const Home = () => {
     const handleClick2 = (isim) => {
         console.log(isim);
     }
-    const handleClick3 = (isim,e) => {
+    const handleClick3 = (isim, e) => {
         //console.log(isim,e.target);
-         console.log(isim,e);
+        console.log(isim, e);
+    }
+
+    const [sayac, setSayac] = useState(0);
+
+    const handleClick4 = () => {
+
+        setSayac(3);
     }
 
     return (
@@ -19,10 +29,15 @@ const Home = () => {
             <button onClick={handleClick()} >Tıkla</button> */}
             <button onClick={handleClick} >Tıkla</button>
             <button onClick={() => handleClick2('luffy')} >Tıkla2</button>
-            <button onClick={(e) => handleClick3('luffy',e)} >Tıkla3</button>
+            <button onClick={(e) => handleClick3('luffy', e)} >Tıkla3</button>
             <button onClick={(e) => {
                 console.log(e)
             }} >Tıkla4</button>
+
+            {/* //useState kullandığımızda render edilmiş hali olabiliyor. */}
+            <p>{sayac}</p>
+            <button onClick={handleClick4} >Arttır</button>
+
         </div>
     );
 }
