@@ -9,8 +9,8 @@ root.render(
   //React.StrictMode 2 kez render ediyor (Geliştirme esnasında).
   // Uygulamanız React 18'e güncelledikten sonra garip davranıyorsa, 
   //varsayılan davranış 2 kez useEffect çalıştırılacak şekilde değiştirildi .
-  <React.StrictMode>
+  //<React.StrictMode>
     <App />
-  </React.StrictMode>
+ // </React.StrictMode>
 );
 
