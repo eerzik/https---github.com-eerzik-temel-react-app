@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import AnaSayfa from "./Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Create from "./Create";
+import BlogDetails from "./BlogDetails";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           {/* exact kullanmayabiliriz buna bakılacak */}
             <Route  exact  path="/" element={<AnaSayfa />} />
             <Route path="/create" element={<Create />} />
+            <Route path="/blogs/:id" element={<BlogDetails />} />
           </Routes>
         </div>
 
