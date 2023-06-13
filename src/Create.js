@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { json } from "react-router-dom";
-
+//react-router-dom v6 useHistory yerine useNavigate oldu.
+import { useNavigate } from "react-router-dom";
 
 const Create = () => {
 
@@ -8,6 +8,7 @@ const Create = () => {
     const [aciklama, setAciklama] = useState('');
     const [yazar, setYazar] = useState('luffy');
     const [yukleniyor, setYukleniyor] = useState(false);
+    const navigate=useNavigate();
     const handleSubmit = (e) => {
         setYukleniyor(true);
         //preventDefault-Postback özelliği yok edildi.yoksa sayfa postback oluyor herşey temizleniyor.
@@ -19,6 +20,11 @@ const Create = () => {
             body: JSON.stringify(yazi)
         }).then(() => {
             setYukleniyor(false);
+            //-1 bir önceki sayfaya yönleniyor
+           // navigate(-1)
+           //useHistory de olan go ve push kaldırılmış!!! 
+           //Anasayfaya yönlenmesi için / yazdık
+           navigate('/');
         })
     }
     return (

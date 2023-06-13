@@ -29,6 +29,12 @@
       "aciklama": "Deneme",
       "yazar": "luffy",
       "id": 5
+    },
+    {
+      "ad": "Anasayfaya yönlendirme",
+      "aciklama": "Yönlendirme denemeleri",
+      "yazar": "sanji",
+      "id": 6
     }
   ]
 }
