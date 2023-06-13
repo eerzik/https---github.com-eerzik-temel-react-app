@@ -7,10 +7,16 @@ const Create = () => {
     const [aciklama,setAciklama]=useState('');
     const [yazar,setYazar]=useState('luffy');
 
+    const handleSubmit =(e)=>{
+        //preventDefault-Postback özelliği yok edildi.yoksa sayfa postback oluyor herşey temizleniyor.
+        e.preventDefault();
+        const yazi={baslik,aciklama,yazar};
+        console.log(yazi);
+    }
     return ( 
         <div className="create">
             <h2 style={{color:'#ff793f'}} >Yeni Yazı Ekle</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <label>Yazı Başlık:</label>
                 <input type="text" required value={baslik} onChange={(e)=>setBaslik(e.target.value)} ></input>
                 <label>Yazı Açıklama:</label>
@@ -22,9 +28,7 @@ const Create = () => {
                     <option value="sanji">Sanji</option>
                 </select>
                 <button>Ekle</button>
-                {baslik}
-                {aciklama}
-                {yazar}
+              
             </form>
         </div>
      );
