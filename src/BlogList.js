@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function BlogList({ bloglar, baslik, handleClick }) {
+export default function BlogList({ bloglar, baslik }) {
     // const blogs=props.bloglar;
     // const baslik=props.baslik;
 
@@ -12,7 +12,7 @@ export default function BlogList({ bloglar, baslik, handleClick }) {
                 <div className="blog-preview" key={blog.id}>
                     <h2>{blog.ad}</h2>
                     <p>Yazının yazarı : {blog.yazar}</p>
-                    <button onClick={() => handleClick(blog.id)} >Sil</button>
+                 
                 </div>
             ))}
         </div>
