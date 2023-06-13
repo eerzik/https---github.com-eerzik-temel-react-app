@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+
 
 export default function BlogList({ bloglar, baslik }) {
     // const blogs=props.bloglar;

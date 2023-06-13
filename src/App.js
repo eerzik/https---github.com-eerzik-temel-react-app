@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import AnaSayfa from "./Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Create from "./Create";
 
 function App() {
 
@@ -12,7 +13,9 @@ function App() {
         <Navbar />
         <div className='content'>
           <Routes>
-            <Route path="/" element={<AnaSayfa />} />
+          {/* exact kullanmayabiliriz buna bakılacak */}
+            <Route  exact  path="/" element={<AnaSayfa />} />
+            <Route path="/create" element={<Create />} />
           </Routes>
         </div>
 
